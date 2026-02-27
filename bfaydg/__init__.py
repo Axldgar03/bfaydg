@@ -17,7 +17,7 @@ def prblema_mochila(capacity, goal, weights, profits):
     # goal is the minimum profit required
 
     n=len(weights)
-    sequence=itt.product([0, 1], repeat=n)
+    sequence=itertools.product([0, 1], repeat=n)
     for k in sequence:
         if suma_de_valores(weights, k) <= capacity:
             if suma_de_valores(profits, k) >= goal:
